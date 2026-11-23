@@ -1,0 +1,6 @@
+{
+  "name": "Ruang Kita",
+  "description": "Ruang pribadi berdua untuk pasangan — kenangan, chat, galeri foto, kapsul waktu, dan catatan yang selalu sinkron realtime.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

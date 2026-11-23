@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-hand: "Caveat", cursive;
+  --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --bg-canvas: #faf7fa;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f3edf5;
+  --text-primary: #1e132d;
+  --text-secondary: #5e4e73;
+  --border-hairline: rgba(30, 19, 45, 0.09);
+  --accent-rose: #c94e72;
+  --accent-gold: #b88332;
+}
+
+.dark {
+  --bg-canvas: #120b20;
+  --bg-surface: #1b1230;
+  --bg-elevated: #261a42;
+  --text-primary: #f6eff8;
+  --text-secondary: #b9aacf;
+  --border-hairline: rgba(242, 210, 155, 0.12);
+  --accent-rose: #e37b99;
+  --accent-gold: #e5b971;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.mb-safe {
+  margin-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
